@@ -1,0 +1,133 @@
+@gutterSize: 1rem
+@titleHeight: 2.7rem
+
+@z0: 0
+@z1: 1
+@z2: 2
+
+caldwell-background
+  background-color: black
+  background: url(@{StaticR images_stairs_jpg}) 50% 27% no-repeat
+  background-size: cover
+  content: ''
+  display: block
+  height: 100vh
+  width: 100vw
+  position: fixed
+  z-index: #{z0}
+
+
+black-overlay
+  background: black
+  content: ''
+  display: block
+  height: 100vh
+  width: 100vw
+  opacity: 0.7
+  position: fixed
+  transition: opacity 0.7s
+  z-index: #{z0}
+
+.hp-Header
+  background-color: rgba(0, 0, 0, 0.93)
+  border-bottom-left-radius: 30px
+  box-shadow: 0px 0px 7px black, 0px 0px 37px black, 0px 0px 57px black, 0px 0px 77px black
+  cursor: pointer
+  font-family: "Megrim" cursive
+  font-size: #{titleHeight}
+  line-height: 1.4
+  padding: calc(#{gutterSize} * 2) #{gutterSize} 0 0.5rem
+  position: fixed
+  right: 0
+  text-shadow: 0px 0px 7px white
+  user-select: none
+  z-index: #{z1}
+
+.hp-Header_span
+  font-family: "Monoton"
+  float: left
+
+
+.hp-Nav
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: flex-end
+  transition: 0.3s
+  position: fixed
+  right: 0
+  cursor: pointer
+  height: 50vh
+  margin: 25vh 0
+  background-color: transparent
+  -ms-transform: translateX(110%)
+  transform: translate3d(calc(100% + #{gutterSize}), 0, 0)
+  z-index: #{z1}
+
+.hp-Nav_a
+  display: flex
+  flex-direction: column
+  position: relative
+  flex-grow: 1
+  justify-content: flex-end
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  transition: 0.25s
+  width: 0%
+  white-space: nowrap
+  text-align: left
+  direction: rtl
+  text-shadow: 0px 0px 7px white
+  font-size: 175%
+  font-family: Megrim sans-serif
+  &:hover
+    border-bottom: 1px solid
+    width: 110%
+
+.hp-Nav_span
+  margin-right: #{gutterSize}
+
+@dotSize: 13px
+.hp-Nav_handle
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  position: absolute
+  top: 47%
+  height: calc(#{dotSize} * 3)
+  width: calc(#{dotSize} * 3)
+  right: calc(110% + 1rem)
+  > li
+    width: #{dotSize}
+    height: #{dotSize}
+    background-color: white
+    box-shadow: 0px 0px 7px white
+    border-radius: 50%
+
+
+.hp-Main
+  position: relative
+
+.hp-Main_section
+  min-height: 100vh
+  width: 100%
+  max-width: 768px /* Tablet Width */
+  margin: auto
+  -webkit-overflow-scrolling: touch
+  padding: 7rem calc(#{gutterSize} * 3) 0 #{gutterSize}
+
+.hp-Main_home
+  display: flex
+  align-items: flex-end
+  padding-bottom: #{gutterSize}
+  max-width: 100%
+  height: 70vh
+  > a
+    display: inline-block
+    margin-right: #{gutterSize}
+    > .fa
+      font-size: 1.5rem
+
+/* .hp-Main_about */
+

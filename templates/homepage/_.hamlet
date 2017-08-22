@@ -1,0 +1,30 @@
+<caldwell-background>
+<black-overlay>
+<header.hp-Header>
+  <span.hp-Header_span>C
+  aldwell
+
+<nav.hp-Nav>
+  ^{hpNavA "Home"}
+  ^{hpNavA "About"}
+  ^{hpNavA "Shows"}
+  ^{hpNavA "Music"}
+  ^{hpNavA "Contact"}
+  <ul.hp-Nav_handle>
+    <li>
+
+<main.hp-Main>
+  <section.hp-Main_section.hp-Main_home>
+    ^{socialLink "facebook" "CaldwellBand" "facebook-square"}
+    ^{socialLink "twitter" "caldwell_band" "twitter-square"}
+    ^{socialLink "instagram" "caldwell_band" "instagram"}
+    ^{socialLink "reverbnation" "caldwellband" "star"}
+  <section.hp-Main_section.hp-Main_about>
+    About
+  <section.hp-Main_section.hp-Main_shows>
+    Shows
+  <section.hp-Main_section.hp-Main_music>
+    Music
+  <section.hp-Main_section.hp-Main_contact>
+    Contact
+

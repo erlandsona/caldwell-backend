@@ -34,12 +34,6 @@ Email
     UniqueEmail email
     deriving Show
 
-Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived.
-    message Text
-    accountId AccountId Maybe
-    deriving Eq Show
-
-
 Gig json
     date UTCTime
     venueId VenueId

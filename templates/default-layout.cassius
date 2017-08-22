@@ -1,0 +1,41 @@
+// also includes basic element styles specific to Caldwell
+html
+  height: 100%
+  background: black
+body
+  color: white
+
+html, body
+  font-family: "Josefin Sans", sans-serif
+  font-size: 93%
+  font-weight: 300
+
+h1
+  font-size: 250%
+  font-weight: inherit
+h2
+  font-size: 240%
+  font-weight: inherit
+h3
+  font-size: 225%
+  font-weight: inherit
+h4
+  font-size: 200%
+  font-weight: inherit
+h5
+  font-size: 175%
+  font-weight: inherit
+h6
+  font-size: 150%
+  font-weight: inherit
+
+p
+  font-size: 135%
+
+a
+  text-decoration: none
+  color: inherit
+
+
+container
+  display: block

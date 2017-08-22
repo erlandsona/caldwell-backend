@@ -1,0 +1,31 @@
+@font-face
+  font-family: 'Josefin Sans'
+  font-style: normal
+  font-weight: 100
+  src: url(@{StaticR fonts_Josefin_Sans_100_normal_woff}) format('woff'), url(@{StaticR fonts_Josefin_Sans_100_normal_ttf}) format('truetype')
+
+@font-face
+    font-family: 'Josefin Sans'
+    font-style: normal
+    font-weight: 300
+    src: url(@{StaticR fonts_Josefin_Sans_300_normal_woff}) format('woff'), url(@{StaticR fonts_Josefin_Sans_300_normal_ttf}) format('truetype')
+
+@font-face
+    font-family: 'Josefin Sans'
+    font-style: normal
+    font-weight: 400
+    src: url(@{StaticR fonts_Josefin_Sans_400_normal_woff}) format('woff'), url(@{StaticR fonts_Josefin_Sans_400_normal_ttf}) format('truetype'), url(@{StaticR fonts_Josefin_Sans_400_normal_svg}#Josefin_Sans_400_normal) format('svg')
+
+@font-face
+    font-family: 'Megrim'
+    font-style: normal
+    font-weight: 400
+    src: url(@{StaticR fonts_Megrim_400_normal_woff}) format('woff'), url(@{StaticR fonts_Megrim_400_normal_ttf}) format('truetype'), url(@{StaticR fonts_Megrim_400_normal_svg}#Megrim_400_normal) format('svg')
+
+@font-face
+    font-family: 'Monoton'
+    font-style: normal
+    font-weight: 400
+    src: url(@{StaticR fonts_Monoton_400_normal_woff}) format('woff'), url(@{StaticR fonts_Monoton_400_normal_ttf}) format('truetype'), url(@{StaticR fonts_Monoton_400_normal_svg}#Monoton_400_normal) format('svg')
+
+

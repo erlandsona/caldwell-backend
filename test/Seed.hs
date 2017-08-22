@@ -5,10 +5,14 @@ import Model
 import Control.Monad.Logger (runStderrLoggingT)
 import Database.Persist.Postgresql (pgConnStr, withPostgresqlConn, runSqlConn, rawExecute)
 
-austin = Account "Austin Erlandson" (Just "password")
-emily = Account "Emily Kroll" (Just "password")
+-- austin = Account "Austin Erlandson" (Just "password")
+-- emily = Account "Emily Kroll" (Just "password")
 
--- emails :: [Email]
+accounts =
+    [ Account "Austin Erlandson" (Just "password")
+    , Account "Emily Kroll" (Just "password")
+    ]
+
 emails =
     [ Email "austin@erlandson.com"
     , Email "krollemily@ymail.com"
@@ -20,6 +24,5 @@ main = do
     let conn = (pgConnStr $ appDatabaseConf settings)
     runStderrLoggingT . withPostgresqlConn conn $ runSqlConn $ do
         runMigration migrateAll
-        austinId <- insert austin
-        emilyId <- insert emily
-        mapM_ insert_ $ zipWith (($)) (zipWith (($)) emails [austinId, emilyId]) [Nothing, Nothing]
+        keys <- mapM insert accounts
+        mapM_ insert_ $ zipWith (($)) (zipWith (($)) emails keys) [Nothing, Nothing]
