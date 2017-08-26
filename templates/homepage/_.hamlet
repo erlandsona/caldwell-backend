@@ -4,7 +4,7 @@
   <span.hp-Header_span>C
   aldwell
 
-<nav.hp-Nav>
+<nav.hp-Nav aria-hidden="true">
   ^{hpNavA "Home"}
   ^{hpNavA "About"}
   ^{hpNavA "Shows"}

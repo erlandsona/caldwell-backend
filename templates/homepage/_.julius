@@ -1,0 +1,38 @@
+ready(function() {
+  // Targetted Elements
+  var nav = document.getElementsByClassName('hp-Nav')[0];
+  var navHandle = document.getElementsByClassName('hp-Nav_handle')[0];
+  var main = document.getElementsByClassName('hp-Main')[0];
+  var blackOverlay = document.getElementsByTagName('black-overlay')[0];
+
+  // Behavior
+  nav.onclick = toggle(Closed);
+});
+
+// toggle :: Nav -> Html Node -> Html Node
+var toggle = function (state, elem) {
+  return elem.setAttribute('aria-expanded', state());
+};
+
+var Open = function () { return 'false'; }
+var Closed = function () { return 'true'; }
+
+var Nav = Type({Open: [], Closed: []});
+
+// not :: Nav -> Nav
+var not = Nav.case({
+  Open: function() { return Closed; },
+  Closed: function() { return Open; }
+});
+
+function ready (fn) {
+  if ( document.attachEvent
+     ? document.readyState === 'complete'
+     : document.readyState !== 'loading'
+  ) {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+

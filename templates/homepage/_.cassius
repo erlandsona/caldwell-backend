@@ -64,6 +64,11 @@ black-overlay
   transform: translate3d(calc(100% + #{gutterSize}), 0, 0)
   z-index: #{z1}
 
+  &[aria-hidden='false']
+    transform: translate(0, 0)
+    transform: translate3d(0, 0, 0)
+
+
 .hp-Nav_a
   display: flex
   flex-direction: column

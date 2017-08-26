@@ -16,6 +16,7 @@ getHomeR = do
     defaultLayout $ do
         setTitle "Caldwell"
         addStylesheet $ StaticR fonts_font_awesome_4_7_0_css_font_awesome_min_css
+        addScript $ StaticR js_union_types_union_type_js
         $(widgetFile "homepage/_")
 
 
